@@ -206,6 +206,70 @@ h5 {
 }
 
 /* Navigation */
+.viewOrder {
+    width: 160px;
+    background-color: rgb(244, 51, 151);
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.viewOrder:hover {
+    background-color: rgb(218, 32, 128);
+}
+
+.orderList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.orderListItem {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.orderListItem:last-child {
+    border-bottom: none;
+}
+
+.orderId {
+    font-weight: bold;
+}
+
+.orderDetails {
+    font-size: 14px;
+    color: #555;
+}
+.viewOrder ul {
+    list-style: none;
+}
+
+.viewOrder ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.orderInfo {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.orderInfo:last-child {
+    margin-right: 0;
+}
+
+/* Add any other styles you want */
 
 nav {
     width: 100%;

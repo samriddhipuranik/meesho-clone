@@ -14,6 +14,7 @@ import Checkout from './components/Checkout/Checkout';
 import Footer from './components/Footer/Footer';
 import NavProduct from './components/Products/Nav_product';
 import SearchProduct from './components/Products/SearchProduct';
+import OrderHistoryPage from './components/orderHistory/orderHistory'; 
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
+          <Route path="/orders" component={OrderHistoryPage} />
           <Route path='/cart' element={<Cart />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/cart/address" element={<Address />} />

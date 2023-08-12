@@ -1,4 +1,4 @@
-import React, {  useState } from 'react'
+import React, {  useState, useEffect } from 'react'
 import meesho from "../Images/meesho.png";
 import search from "../Images/search.png";
 import mobile from "../Images/mobile.png";
@@ -10,14 +10,23 @@ import Menu from '@mui/material/Menu';
 import './Navbar.css'
 import { logout } from '../../Redux/Reducers/authSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+
+
 
 const Navbar = () => {
+    const [orderID, setOrderID] = useState('');
 
+    useEffect(() => {
+        const generatedOrderID = uuidv4().split('-')[0]; // Get the first part of the UUID
+        setOrderID(generatedOrderID);
+    }, []);
     const authentication = JSON.parse(localStorage.getItem("user") || null);
     const dispatch = useDispatch();
     const cartList = useSelector(state => state.cart.list);
-
-
+    // order placed 
+    const orders = JSON.parse(localStorage.getItem('orders') || '[]');
+    const [showOrders, setShowOrders] = useState(false);
     // dropdown
 
     const [anchorEl, setAnchorEl] = useState(null);
@@ -133,8 +142,48 @@ const Navbar = () => {
                                 <h3>Hello {authentication ? authentication.username : "user"}</h3>
                                 <h5>  Welcome to Meesho</h5>
                                 <button className="login_btn" onClick={handleUser}> Sign {authentication ? "out" : "up"}</button>
-                            </div>
+{/* Button to toggle the visibility of the order list */}
+<br></br><button className ='viewOrder' style= {{
+    width: '160px',
+    backgroundColor: 'rgb(244, 51, 151)',
+    padding: '10px',
+    color: 'white',
+    fontSize: '16px',
+    border: 'none',
+    outline: 'none',}}onClick={() => setShowOrders(!showOrders)}>
+                            View Orders
+                        </button>
+                        <br></br>
+                        {showOrders && (
+                    <ul className="orderList">
+                        {orders.map(order => (
+                            <li className="orderListItem" key={order.orderId}>
+                                <span className="orderId">Order ID: {orderID} </span>
+                                <span className="orderId">| Total: ₹{order.total}</span>
 
+                                <span className="orderDetails">
+                                    {/* Display more order details here */}
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+          
+        
+                        {/* Display the list of orders */}
+                        {/* {showOrders && orders.length > 0 && (
+                            <div className='viewOrder'>
+                                <ul>
+                                    {orders.map((order, index) => (
+                                        <li key={index}>
+                                            Order ID: {orderID}, Total: ₹{order.total}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div> */}
+                        {/* )}    */}
+                        </div>
+                        
                         </Menu>
                         <div className="CartContainer" onClick={() =>
                             authentication ?
