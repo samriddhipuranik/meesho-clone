@@ -30,7 +30,7 @@ const Address = () => {
                 orderId: uniqueOrderId,                
             };
             // Get existing orders from local storage
-            const existingOrders = JSON.parse(localStorage.getItem('orders')) || [];
+            const existingOrders = JSON.parse(sessionStorage.getItem('orders')) || [];
 
             // Add the new order to the list
             const updatedOrders = [...existingOrders, order];
