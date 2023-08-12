@@ -143,7 +143,43 @@ const Navbar = () => {
                                 <h5>  Welcome to Meesho</h5>
                                 <button className="login_btn" onClick={handleUser}> Sign {authentication ? "out" : "up"}</button>
 {/* Button to toggle the visibility of the order list */}
-<br></br><button className ='viewOrder' style= {{
+<br></br>
+<button
+    className="viewOrder"
+    style={{
+        width: '160px',
+        backgroundColor: 'rgb(244, 51, 151)',
+        padding: '10px',
+        color: 'white',
+        fontSize: '16px',
+        border: 'none',
+        outline: 'none',
+    }}
+    onClick={() => setShowOrders(!showOrders)}
+>
+    {authentication && orders.length > 0 ? 'View Orders' : 'Use : HAPPY8'}
+</button>
+
+<br />
+
+{authentication && showOrders && orders.length > 0 ? (
+    <ul className="orderList">
+        {orders.map(order => (
+            <li className="orderListItem" key={order.orderId}>
+                <span className="orderId">Order ID: {order.orderID} </span>
+                <span className="orderId">| Total: ₹{order.total}</span>
+
+                <span className="orderDetails"></span>
+            </li>
+        ))}
+    </ul>
+) : (
+    <p style={{fontSize:'.000000001px'}}>*Terms and conditions applied</p>
+    )}
+    {!authentication  && orders.length <= 0 ? <p>No orders to show</p> : null}
+
+
+{/* <button className ='viewOrder' style= {{
     width: '160px',
     backgroundColor: 'rgb(244, 51, 151)',
     padding: '10px',
@@ -151,10 +187,12 @@ const Navbar = () => {
     fontSize: '16px',
     border: 'none',
     outline: 'none',}}onClick={() => setShowOrders(!showOrders)}>
-                            View Orders
+                            {authentication &&  orders.length > 0? 'View Orders' : 'Use : HAPPY8' }
                         </button>
+                        
                         <br></br>
-                        {showOrders && (
+                        {!authentication && !showOrders &&  orders.length <= 0 ?<p>No orders to show</p>
+                :
                     <ul className="orderList">
                         {orders.map(order => (
                             <li className="orderListItem" key={order.orderId}>
@@ -162,26 +200,13 @@ const Navbar = () => {
                                 <span className="orderId">| Total: ₹{order.total}</span>
 
                                 <span className="orderDetails">
-                                    {/* Display more order details here */}
+                                    
                                 </span>
                             </li>
                         ))}
                     </ul>
-                )}
-          
-        
-                        {/* Display the list of orders */}
-                        {/* {showOrders && orders.length > 0 && (
-                            <div className='viewOrder'>
-                                <ul>
-                                    {orders.map((order, index) => (
-                                        <li key={index}>
-                                            Order ID: {orderID}, Total: ₹{order.total}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div> */}
-                        {/* )}    */}
+                } */}
+                
                         </div>
                         
                         </Menu>
