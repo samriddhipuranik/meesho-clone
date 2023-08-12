@@ -1,0 +1,24 @@
+.Form-body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: linear-gradient(rgb(253, 233, 242) 0%, rgb(253, 240, 232) 100%, rgb(253, 240, 232) 100%);
+    overflow-y: auto;
+
+}
+
+.form-content {
+    background-color: #d44ba2;
+    padding: 30px;
+
+}
+
+.form-content .btn {
+    background-color: rgb(244, 51, 151);
+    margin-top: 20px;
+    border: 1px solid white;
+    padding: 10px 20px;
+
+}

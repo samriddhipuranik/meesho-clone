@@ -1,0 +1,249 @@
+.footer-Container {
+    background: rgb(249, 249, 249);
+    margin-top: 40px;
+}
+
+.footer-outer-box {
+    min-height: auto;
+    background-color: rgb(249, 249, 249);
+}
+
+.footerInnerBox {
+    line-height: 16px;
+    padding: 60px 0px 40px;
+}
+
+.footerContextBox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footerBoxOne {
+    text-align: left;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+
+
+.footerBoxOne h4 {
+    margin-bottom: 16px;
+    margin-top: 0px;
+    color: rgb(51, 51, 51);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    font-family: "Mier bold";
+
+}
+
+.footerBoxOne p {
+    width: 100%;
+    margin: 0px auto 32px;
+    color: rgb(102, 102, 102);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "Mier book";
+}
+
+.Apps {
+    display: flex !important;
+    width: 100%;
+    gap: 16px;
+    background: transparent;
+}
+
+.GooglePlay,
+.AppStore {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+}
+
+.GooglePlay img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    inset: 0px;
+    color: transparent;
+}
+
+.AppStore img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    inset: 0px;
+    color: transparent;
+}
+
+.footerBoxTwo {
+    margin-bottom: 40px;
+}
+
+.footerBoxTwo>div {
+    margin-bottom: 16px;
+    cursor: pointer;
+    /* display: inline-block; */
+}
+
+.footerBoxTwo>div span {
+    color: rgb(102, 102, 102);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "Mier demi";
+    margin: 0px;
+    padding: 0px;
+}
+
+.footerBoxThree>div {
+    margin-bottom: 16px;
+    cursor: pointer;
+    /* display: inline-block; */
+}
+
+.footerBoxThree>div span {
+    color: rgb(102, 102, 102);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "Mier demi";
+    margin: 0px;
+    padding: 0px;
+}
+
+.fourWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+}
+
+.wrapperOne {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.wrapperOne h6 {
+    margin-bottom: 16px;
+    margin-top: 0px;
+    color: rgb(51, 51, 51);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: "Mier bold";
+}
+
+.icons {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.icons img {
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+.wrapperTwo {
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    font-weight: 500;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.wrapperTwo h6 {
+    margin-bottom: 16px;
+    margin-top: 0px;
+    color: rgb(51, 51, 51);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: "Mier bold";
+}
+
+@media (min-width: 992px) {
+    .footerBoxOne {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+
+    .footerBoxTwo,
+    .footerBoxThree {
+        flex: 0 0 16.6667%;
+        max-width: 16.6667%;
+    }
+
+    .footerBoxFour {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+
+    .wrapperOne,
+    .wrapperTwo {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    /* .footerBoxOne {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+
+    .footerBoxTwo,
+    .footerBoxThree {
+        flex: 0 0 16.6667%;
+        max-width: 16.6667%;
+    }
+
+    .footerBoxFour {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+
+    .wrapperOne,
+    .wrapperTwo {
+        flex: 0 0 50%;
+        max-width: 50%;
+    } */
+
+    .footerBoxOne h4 {
+        font-size: 22px;
+    }
+
+    .footerBoxTwo,
+    .footerBoxThree {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-left: 20px;
+    }
+
+    .wrapperOne {
+        margin-bottom: 20px;
+    }
+}

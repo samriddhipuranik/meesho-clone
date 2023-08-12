@@ -1,0 +1,307 @@
+.each-item-wrapper {
+    display: grid;
+    grid-gap: 30px 30px;
+    grid-template-columns: repeat(4, 1fr);
+    width: 83%;
+    margin: auto;
+    padding-bottom: 40px;
+
+}
+
+.singleCompo {
+    height: 350px;
+    width: 300px;
+    border: 1px rgb(211, 211, 211) solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 8px 7px 5px gray;
+    margin-top: 100px;
+    transition: transform 0.5s;
+    border-radius: 10px;
+    justify-content: space-evenly;
+}
+
+/* #pagination-button-next {
+
+    margin-bottom: 20px;
+
+} */
+
+.btn-next {
+    /* display: block; */
+    /* margin: auto; */
+    width: 5rem;
+    background-color: rgb(244, 51, 151);
+    color: white;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+}
+
+.btn-prev {
+    /* display: block; */
+    /* margin: auto; */
+    width: 5rem;
+    background-color: rgb(244, 51, 151);
+    color: white;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.disabled {
+    background-color: rgb(150, 8, 81);
+}
+
+
+@media screen and (max-width: 426px) {
+
+    .each-item-wrapper {
+        display: grid;
+        grid-gap: 19px 19px;
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        margin: auto;
+        padding-bottom: 40px;
+    }
+
+
+}
+
+
+.productMain-box {
+    margin-bottom: 20px;
+    padding: 0px 20px 0px 0px;
+}
+
+.product-box {
+    height: 100%;
+    width: 236px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border: 1px solid rgb(240, 240, 240);
+}
+
+.product-img-box {
+    position: relative;
+    height: 232px;
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.product-img-box img {
+    position: absolute;
+    height: 100%;
+    max-width: 230px;
+    inset: 0px;
+    object-fit: contain;
+    color: transparent;
+}
+
+.product-content {
+    min-height: 172px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.product-content-one {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.product-span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(244, 51, 151);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: "Mier book";
+    margin: 0px;
+    padding: 0px;
+}
+
+.product-span p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(153, 153, 153);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Mier book";
+    margin: 0px;
+    padding: 0px;
+}
+
+.span-div {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding-top: 12px;
+}
+
+.span-div h5 {
+    color: rgb(51, 51, 51);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "Mier bold";
+    margin: 0px;
+    padding: 0px;
+}
+
+.span-div span {
+    color: rgb(153, 153, 153);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: "Mier demi";
+    margin: 0px;
+    padding: 0px;
+}
+
+.delivery {
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding-top: 12px;
+}
+
+.delivery-box {
+    pointer-events: none;
+    color: rgb(102, 102, 102);
+    background: rgb(249, 249, 249);
+    padding: 4px 8px;
+    border-radius: 48px;
+    display: inline-flex;
+}
+
+.delivery-text {
+    color: rgb(102, 102, 102);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: "Mier demi";
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.rating-box {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding-top: 12px;
+}
+
+.rating1 {
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 16px;
+    padding: 4px 8px;
+    background: rgb(35, 187, 117);
+    fill: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Mier demi";
+    margin: 0px;
+    /* padding: 0px; */
+}
+
+.review {
+    padding: 0px 4px;
+    color: rgb(153, 153, 153);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: "Mier demi";
+    margin: 0px;
+}
+
+@media screen and (max-width: 450px) {
+    .productMain-box {
+        margin-bottom: 20px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .product-box {
+        height: 100%;
+        width: 157px;
+    }
+}
+
+
+
+.big-box {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.big-box2 {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filter-area {
+    width: 20%;
+}
+
+.noResultFound{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.noResultFound img{
+    max-width: 200px;
+}
+
