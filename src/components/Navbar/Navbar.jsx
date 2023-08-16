@@ -18,8 +18,9 @@ const Navbar = () => {
     const [orderID, setOrderID] = useState('');
 
     useEffect(() => {
-        const generatedOrderID = uuidv4().split('-')[0]; // Get the first part of the UUID
+        const generatedOrderID = uuidv4().substring(0, 8);; 
         setOrderID(generatedOrderID);
+        console.log("Generated Order ID:", generatedOrderID);
     }, []);
     const authentication = JSON.parse(localStorage.getItem("user") || null);
     const dispatch = useDispatch();
@@ -166,7 +167,7 @@ const Navbar = () => {
     <ul className="orderList">
         {orders.map(order => (
             <li className="orderListItem" key={order.orderId}>
-                <span className="orderId">Order ID: {order.orderID} </span>
+                <span className="orderId">Order ID: {order.orderId} </span>
                 <span className="orderId">| Total: ₹{order.total}</span>
 
                 <span className="orderDetails"></span>
